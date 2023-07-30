@@ -1,0 +1,134 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-menu {
+  z-index: 99999;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  flex-direction: column;
+  background-color: #000000;
+  width: 80%;
+  height: 100%;
+  transition: 0.3s;
+}
+.nav-menuBody {
+  height: 100%;
+  overflow-y: auto;
+}
+.nav-menuTitleBar {
+  border-bottom: 1px solid rgb(47, 51, 54) !important;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+.nav-menuTitleBar h2 {
+  font-weight: 800;
+  font-size: 19px;
+  color: #d9d9d9;
+}
+.nav-menu.active {
+  box-shadow: 10px 0 5px 800px rgba(91, 112, 131, 0.4);
+  left: 0;
+}
+.SideNavUserInfo {
+  padding: 12px;
+}
+.nav-menu img {
+  margin-top: 2px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+.sideMenuFName {
+  font-weight: 700;
+  font-size: 18px;
+  color: #d9d9d9;
+}
+.sideMenuUName {
+  font-weight: 400;
+  font-size: 15px;
+  color: #6e767d;
+}
+.AccStat {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+.AccStat h4 {
+  margin-right: 1rem;
+  color: #6e767d;
+  font-weight: 400;
+}
+.AccStat h4 b {
+  margin-right: 0.3rem;
+  color: #d9d9d9;
+}
+.nav-item {
+  padding-left: 12px;
+  display: flex;
+  align-items: stretch;
+  margin: 2rem 0;
+}
+.nav-item i {
+  color: #6e767d;
+}
+
+.nav-link {
+  margin-left: 8px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #d9d9d9;
+}
+.nav-linkLogout {
+  padding-top: 8px;
+  padding-left: 12px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #d9d9d9;
+}
+.logoutbody {
+  padding-top: 15px;
+  border-top: 1px solid rgb(47, 51, 54) !important;
+  border: none;
+}
+.bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #1da1f2;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.bar:nth-child(2) {
+  opacity: 0;
+}
+
+.bar:nth-child(1) {
+  -webkit-transform: translateY(6px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
+}
+
+.bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}

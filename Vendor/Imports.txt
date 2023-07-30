@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<script src="https://kit.fontawesome.com/1811a0037b.js" crossorigin="anonymous"></script>
+
+
+
+/////
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/1811a0037b.js" crossorigin="anonymous"></script>
+
+
+
+     <div class='Main'>
+                <div class='TitleBar'>
+                    <button onclick='location.href='Home.php''>
+                        <svg viewBox='0 0 24 24' aria-hidden='true'>
+                            <g>
+                                <path d='M20 11H7.414l4.293-4.293c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0l-6 6c-.39.39-.39 1.023 0 1.414l6 6c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L7.414 13H20c.553 0 1-.447 1-1s-.447-1-1-1z'>
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div>
+                        <h2>Profile</h2>
+                    </div>
+                </div>
+                <div class='ProfileBody'>
+                    <div class='ProfilePic_N_Button'>
+                        <img src='Images/default_profile.png' alt=''>
+                    </div>
+                    <div class='Profile_Info'>
+                    <h2>This account doesn’t exist</h2>
+                    <p>Try searching for another.</p>
+                    </div>
+                </div>
+            </div> 

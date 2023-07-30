@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  background-color: #242d34;
+  height: 100%;
+}
+svg {
+  width: 2rem;
+  /* transition: all 200ms ease-in; */
+}
+.TitleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgb(47, 51, 54);
+}
+
+.TitleBar button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.TitleBar button i {
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 12px;
+  color: #1da1f2;
+}
+.TitleBar input {
+  cursor: pointer;
+  margin-right: 12px;
+  background-color: #1da1f2;
+  color: #d9d9d9;
+  border-radius: 999px;
+  border: none;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 700;
+}
+.ComposeTweet_Body {
+  background: #000000;
+  border-radius: 12px;
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 12px;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    background-color: #000000;
+  }
+  .ComposeTweet_Body {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+.Compose_Area {
+  padding: 0.5rem 1rem 1.5rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Compose_Area img {
+  margin-right: 0.8rem;
+}
+
+.Compose_Area textarea {
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-top: 0.6rem;
+  width: 80%;
+  color: #d9d9d9;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  resize: none;
+  outline: none;
+  user-select: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  height: auto;
+}
+.Compose_Area textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #6e767d;
+  opacity: 1;
+}
+
+.Compose_Area textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #6e767d;
+}
+
+.Compose_Area textarea::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #6e767d;
+}

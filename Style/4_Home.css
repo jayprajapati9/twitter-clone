@@ -1,0 +1,585 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: Montserrat, sans-serif;
+  background: #000000;
+}
+
+html,
+body {
+  height: 100%;
+}
+svg {
+  width: 2rem;
+  /* transition: all 200ms ease-in; */
+}
+
+/* Floating Tweet Button For Mobiles Only */
+.floatingTweet_Btn {
+  position: fixed;
+  right: 25px;
+  bottom: 75px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #1da1f2;
+  border: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  z-index: 9999;
+  display: none;
+}
+
+.floatingTweet_Btn svg {
+  fill: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+@media screen and (max-width: 550px) {
+  .floatingTweet_Btn {
+    display: block;
+  }
+}
+
+/*------- Left Side Fixed Nav Bar -------*/
+.Nav_List {
+  background: rgb(0, 0, 0);
+  padding: 1rem 1rem 1rem 4rem;
+  /* width: 21.5rem;*/
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+@media only screen and (max-width: 550px) {
+  .Nav_List {
+    z-index: 9999;
+    background: rgb(0, 0, 0) !important;
+    border: 1px solid rgb(47, 51, 54);
+    border-bottom: none !important;
+    flex-direction: row;
+    width: 100vw !important;
+    height: 3.5rem;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Nav_List {
+    align-items: center;
+    padding: 1rem;
+  }
+}
+.Nav_Brand_Icon {
+  color: #d9d9d9;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+@media only screen and (max-width: 550px) {
+  .Nav_Brand_Icon {
+    display: none;
+  }
+}
+
+.Nav_Item {
+  list-style: none;
+  font-size: 0.7rem;
+  text-align: center;
+  transition: all 200ms ease-in;
+}
+
+.Nav_Item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 19px;
+}
+.Nav_Item a p {
+  color: #d9d9d9;
+}
+
+.Nav_Item a i {
+  font-size: 2.2rem;
+  margin-right: 0.5rem;
+  color: #d9d9d9;
+}
+@media only screen and (max-width: 550px) {
+  .Nav_Item a i {
+    color: #d9d9d9;
+    margin-right: 0;
+  }
+}
+.Active_NavItem a p {
+  color: #1da1f2 !important;
+}
+
+.Active_NavItem a i {
+  color: #1da1f2 !important;
+}
+@media only screen and (max-width: 550px) {
+  .ExploreItem,
+  .NotificationItem,
+  .itemNavLogout {
+    display: none;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .NavItem_Label {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .NavItem_Label {
+    display: none;
+  }
+}
+
+/*==========================
+======= Main Content =======
+============================*/
+.MainContent {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+.Main {
+  z-index: 9;
+  /* width: 600px;
+  max-width: 600px; */
+  width: 100%;
+  height: max-content;
+  min-height: 100%;
+  /*background-color: darkorchid;*/
+  margin-left: 18rem;
+  border-top: none !important;
+  border-bottom: none !important;
+  border: 1px solid rgb(47, 51, 54);
+}
+@media screen and (max-width: 768px) {
+  .Main {
+    width: 100% !important;
+    margin-left: 4.5rem !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .Main {
+    width: 100%;
+    margin-left: 0px !important;
+  }
+}
+
+.Main .TitleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgb(47, 51, 54);
+}
+.Main .TitleBar img {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-left: 12px;
+  display: none;
+}
+.Main .TitleBar h2 {
+  color: #d9d9d9;
+  font-weight: 800;
+  margin-left: 1rem;
+}
+.Main .TitleBar i {
+  margin-right: 12px;
+  cursor: pointer;
+
+  color: #1da1f2;
+}
+@media screen and (max-width: 550px) {
+  .Main .TitleBar img {
+    display: block;
+  }
+  .Main .TitleBar h2 {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .MakeTweet_Box {
+    display: none;
+  }
+}
+
+.MakeTweet_Img_Input {
+  padding: 0.5rem 1rem 1.5rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.MakeTweet_Img_Input img {
+  margin-right: 0.8rem;
+}
+
+.MakeTweet_Img_Input textarea {
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-top: 0.6rem;
+  width: 80%;
+  color: #d9d9d9;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  resize: none;
+  outline: none;
+  user-select: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  height: auto;
+}
+.MakeTweet_Img_Input textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #6e767d;
+  opacity: 1;
+}
+
+.MakeTweet_Img_Input textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #6e767d;
+}
+
+.MakeTweet_Img_Input textarea::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #6e767d;
+}
+@media screen and (max-width: 550px) {
+  .MakeTweet_Img_Input textarea {
+    width: 80%;
+  }
+}
+.MakeTweetOptions {
+  border-top: 1px solid rgb(47, 51, 54);
+  margin-left: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.MakeTweetOptions i {
+  cursor: pointer;
+  font-size: 28px;
+  color: #1da1f2;
+}
+
+.MakeTweetOptions button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  padding: 12px 12px 12px 12px;
+  background-color: #1da1f2;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+}
+.WelcomeMsg {
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.WelcomeMsg h2 {
+  color: #d9d9d9;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.WelcomeMsg p {
+  color: #6e767d;
+  font-weight: 400;
+  font-size: 15px;
+}
+/*==========================
+======= Tweet Style ========
+============================*/
+
+.Tweet {
+  border-bottom: 1px solid rgb(47, 51, 54);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.Tweet:nth-child(1) {
+  margin-top: 12px;
+}
+.Tweet img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.TweetInner_Body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.TweetdeleteIcon {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  margin-right: 12px;
+  color: #6e767d;
+}
+.TweetdeleteIcon i {
+  font-size: 20px;
+}
+.TweetInner_Body span a {
+  display: inline;
+  color: #d9d9d9;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+.TweetInner_Body span a:hover {
+  text-decoration: underline;
+}
+.TweetInner_Body .TweetInner_BodyUName {
+  color: #6e767d;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+.TweetInner_Body p {
+  margin-top: 7px;
+  font-size: 15px;
+  font-weight: 400;
+  padding-right: 35px;
+}
+.TweetInner_Body p a {
+  white-space: pre-line;
+  color: #d9d9d9;
+  text-decoration: none;
+}
+.TweetInner_Body span {
+  display: flex;
+  align-items: center;
+}
+.TweetInner_Body span i {
+  color: #d9d9d9;
+  font-size: 18px;
+  margin-left: 6px;
+}
+/* .Tweet_Action_Icons {
+  display: inline;
+}
+.Tweet_Action_Icons i {
+  cursor: pointer;
+  color: #6e767d;
+  border-radius: 999px;
+  margin-right: 25px;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+} */
+
+.Tweet_Action_Icons {
+  display: flex;
+}
+
+.Tweet_Action_Icons i {
+  display: flex;
+  cursor: pointer;
+  color: #6e767d;
+  border-radius: 999px;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+}
+.Tweet_Action_Icons i:nth-child(3) {
+  margin-left: 25px;
+}
+.Tweet_Action_Icons i:nth-child(4) {
+  margin-left: 25px;
+}
+.Tweet_Action_Icons p {
+  margin-left: 4px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+  color: #6e767d !important;
+  padding-right: 0 !important;
+  display: flex;
+}
+
+/* .Tweet_Action_Icons i:nth-child(1) {
+  color: #e0245e;
+}
+.Tweet_Action_Icons i:nth-child(2) {
+  color: #17bf63;
+}
+.Tweet_Action_Icons i:nth-child(3) {
+  color: #1da1f2;
+} */
+
+/*==================================
+======= Right Side Div Style =======
+====================================*/
+.RightSideDiv {
+  margin-left: 15px;
+  margin-right: 12px;
+}
+@media screen and (max-width: 768px) {
+  .RightSideDiv {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .RightSideDiv {
+    display: none;
+  }
+}
+.User_SearchBar {
+  margin-top: 12px;
+  margin-bottom: 15px;
+  /*6e767d*/
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  padding-left: 12px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-radius: 9999px;
+  background-color: rgb(32, 35, 39);
+}
+
+.User_SearchBar i {
+  color: #6e767d;
+  font-size: 25px;
+}
+
+.User_SearchBar input {
+  color: #6e767d;
+  font-weight: 400;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.WhotoFollow_Card {
+  border-radius: 16px;
+  background-color: #15181c;
+  color: #d9d9d9;
+}
+.WhotoFollow_Card h2 {
+  font-weight: 800;
+  font-size: 20px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+/**/
+.RandomUser_Card {
+  border-top: 1px solid rgb(47, 51, 54);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.RandomUser_Card img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.RandomUser_Card .RandomUser_Card_Name p,
+a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/**/
+.RandomUser_Card .RandomUser_Card_Name a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.RandomUser_Card .RandomUser_Card_Name a:nth-child(1) {
+  color: #d9d9d9;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.RandomUser_Card .RandomUser_Card_Name a:nth-child(1):hover {
+  color: #d9d9d9;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.RandomUser_Card .RandomUser_Card_Name p:nth-child(2) {
+  color: #6e767d;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.RandomUser_Card .RandomUser_Card_Name {
+  width: 100px;
+}
+
+.RandomUser_Card .RandomeUserFollowBtn {
+  position: relative;
+  right: 0;
+  
+ width: max-content;
+  cursor: pointer;
+  color: #1da1f2;
+  font-weight: 700;
+  font-size: 15px;
+  border: 1px solid #1da1f2;
+  background-color: transparent;
+  margin-left: 15px;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  border-radius: 99999px;
+}

@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #000000 !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+svg {
+  width: 2rem;
+  /* transition: all 200ms ease-in; */
+}
+.TitleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgb(47, 51, 54);
+}
+
+.TitleBar button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.TitleBar button i {
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 12px;
+  color: #1da1f2;
+}
+.TitleBar h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #d9d9d9;
+}
+.TitleBar input {
+  cursor: pointer;
+  margin-right: 12px;
+  background-color: #1da1f2;
+  color: #d9d9d9;
+  border-radius: 999px;
+  border: none;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 700;
+}
+.Form_Body{
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    margin-top: 12px;
+}
+.Form_Body img{
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+}
+.Form_Body .Text_Input{
+    margin-bottom: 25px;
+    border-radius: 4px;
+    border: 1px solid #2f3336;
+}
+.Form_Body .Text_Input:focus-within{
+    border: 1px solid #1da1f2;
+}
+
+.Form_Body .Text_Input:focus-within span{
+    color: #1da1f2;
+}
+.Form_Body .Text_Input span{
+    display: block;
+    font-size: small;
+    padding-top: 8px;
+    color: #6e767d;
+    font-weight: 400;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.Form_Body .Text_Input input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-top: 7px;
+    margin-left: 8px;
+    width: 90%;
+    font-size: 17px;
+    font-weight: 400;
+    color: #d9d9d9;
+    padding-bottom: 7px;
+}
